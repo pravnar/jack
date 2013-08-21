@@ -179,6 +179,14 @@ class FieldDefn
       "get#{name.camelcase}()"
     end
   end
+
+  def clojure_getter
+    if data_type == :boolean
+      "#{name}?"
+    else
+      "get-#{name}"
+    end
+  end 
   
   def post_modifier
     if data_type == :datetime
