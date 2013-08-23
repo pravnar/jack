@@ -224,8 +224,7 @@
         <attribute name="Implementation-Vendor-Id" value="com.liveramp" />
         <attribute name="Implementation-Build" value="${git.revision}" />
       </manifest>
-      <fileset dir="${build.classes}">
-        <exclude name="**/test_project/**/*.class"/>
+      <fileset dir="${build.classes}">        
         <include name="**/*.class" />
       </fileset>
       <fileset dir="${src.java}">
